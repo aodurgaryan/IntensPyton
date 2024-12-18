@@ -1,0 +1,42 @@
+#include <stdio.h>
+int main() {
+    int m, n; // m - номер месяца, n - число
+    printf("Введите номер месяца (1-12) и число: ");
+    scanf("%d %d", &m, &n);
+    // Проверка на корректность ввода
+    if (m < 1 || m > 12 || n < 1) {
+        printf("Некорректный ввод.\n");
+        return 1;
+    }
+ // Переменная для хранения количества дней в месяце
+    int daysInMonth;
+ // Определяем количество дней в месяце
+    switch (m) {
+        case 1: case 3: case 5: case 7: case 8: case 10: case 12:
+            daysInMonth = 31;
+            break;
+        case 4: case 6: case 9: case 11:
+            daysInMonth = 30;
+            break;
+        case 2:
+            daysInMonth = 28; // Не учитываем високосные годы
+            break;
+        default:
+            daysInMonth = 0; // Неверный месяц
+            break;
+    }
+
+    // Определяем предыдущий день
+    if (n > 1) {
+        printf("Предыдущий день: %d.%d\n", n - 1, m);
+    } else {
+        // Если n == 1, переходим на предыдущий месяц
+        if (m == 1) {
+            printf("Предыдущий день: %d.12\n", daysInMonth); // Переход на декабрь
+        } else {
+            printf("Предыдущий день: %d.%d\n", daysInMonth, m - 1); // Переход на предыдущий месяц
+        }
+    }
+
+    return 0;
+}
