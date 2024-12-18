@@ -1,0 +1,18 @@
+#include <stdio.h>
+int main() {
+    int n;
+    double sum = 0.0;
+    int i = 1;
+
+    printf("Введите натуральное число n: ");
+    scanf("%d", &n);
+
+    // Цикл с предусловием
+    while (i <= n) {
+        sum += 1.0 / (2 * i) / (2 * i); // 1/(2*i)^2
+        i++;
+    }
+
+    printf("Сумма: %lf\n", sum);
+    return 0;
+}
