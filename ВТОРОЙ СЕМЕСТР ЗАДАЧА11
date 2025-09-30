@@ -1,0 +1,11 @@
+import math
+
+# Исходные данные
+R_inner = 20
+R_outer = 30
+
+# Вычисляем площадь кольца
+area_ring = math.pi * (R_outer**2 - R_inner**2)
+
+# Выводим результат
+print(f"Площадь кольца: {area_ring:.4f}")
