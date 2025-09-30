@@ -1,0 +1,15 @@
+import math
+
+# Данные контрольного примера
+A = 4
+B = 9
+
+# Вычисление среднего арифметического
+average_arithmetic = (A + B) / 2
+
+# Вычисление среднего геометрического
+average_geometric = math.sqrt(A * B)
+
+# Вывод результатов
+print(f"Среднее арифметическое = {average_arithmetic}")
+print(f"Среднее геометрическое = {average_geometric}")
